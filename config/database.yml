@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: postgres
+  password: root
+
+development:
+  <<: *default
+  database: SearchSpot_development
+
+test:
+  <<: *default
+  database: SearchSpot_test
+
+production:
+  <<: *default
+  database: SearchSpot_production
+  username: SearchSpot
+  password: <%= ENV['SEARCHSPOT_DATABASE_PASSWORD'] %>
