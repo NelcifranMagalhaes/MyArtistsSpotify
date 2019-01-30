@@ -8,13 +8,16 @@ class Api::V1::ArtistsController < ApplicationController
 
 	private
 	def followed_method
-		RSpotify.authenticate(SPOT_ID, SPOT_SECRET)
+
+		x = RSpotify.authenticate(SPOT_ID, SPOT_SECRET)
 		me = RSpotify::User.find('nyosama')
-		# followed_artists = me.following(type: 'artist', limit: 50)
+		array_artist = []
 		me.playlists.each do |pl|
 			artist = {
 				name: pl.name,
 			}
+			array_artist.push(pl.name)
 		end
+		return array_artist
 	end
 end
