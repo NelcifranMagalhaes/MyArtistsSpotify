@@ -16,7 +16,7 @@ class Api::V1::ArtistsController < ApplicationController
 			artist = {
 				name: pl.name,
 			}
-			array_artist.push(pl.name)
+			array_artist.push(artist)
 		end
 		return array_artist
 	end

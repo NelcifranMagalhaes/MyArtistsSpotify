@@ -5,5 +5,6 @@ Rails.application.routes.draw do
       resources :artists,only: [:index]
     end
   end
+  root to: 'api/v1/artists#index'
 end
 
