@@ -1,24 +1,37 @@
-# README
+# MySpotifyPlaylist
+> see ya.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+An API with my playlist of spotify in Json format
 
-* Ruby version
 
-* System dependencies
+## Installation
 
-* Configuration
+Windows & Linux:
 
-* Database creation
+```sh
+git clone or download the project
+```
 
-* Database initialization
 
-* How to run the test suite
+## Development setup
 
-* Services (job queues, cache servers, search engines, etc.)
+For use your own account change SPOT_ID and SPOT_SECRET in artists_controller for your credentials.
 
-* Deployment instructions
 
-* ...
+```sh
+bundle install
+rails db:create
+rails db:migrate
+rails s
+```
+
+## Used Technologies
+
+* Used Gems with url in Gemfile
+* PostgreSQL
+* Rspotify
+
+## Meta
+Nelcifran Magalhaes – [Linkedin](https://www.linkedin.com/in/nelcifranpires/
+) – nelcifranpires@gmail.com
