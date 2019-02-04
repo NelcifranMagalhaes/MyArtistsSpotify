@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Artist, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  	it 'Artist is valid?' do
+		artist = create(:artist)
+	  	expect(artist).to be_valid
+	end
 end
