@@ -17,6 +17,9 @@ class Api::V1::ArtistsController < ApplicationController
 				name: pl.name,
 			}
 			array_artist.push(artist)
+			unless Artist.find_by(name: pl.name)
+				Artist.create!(name: pl.name)
+			end
 		end
 		return array_artist
 	end
